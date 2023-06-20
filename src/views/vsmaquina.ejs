@@ -15,8 +15,7 @@
 <body>
 	<div class="barra-superior">
 		<img class="logo" src="imagenes/logo/League of Legends Logo.webp" alt="logo">
-		<div id="restantes" class="hidden">INTENTOS: <span id="intentos-restantes"> 5</span></div>
-
+		<div id="restantes" class="hidden">INTENTOS: <span id="intentos-restantes">&nbsp;5</span></div>
 
 		<div class="chat-container hidden">
 			<div class="chat">
@@ -105,7 +104,7 @@
 						</div>
 					</div>
 					<div class="posicion">
-						<label for="posicion">POSICIÓN PRINCIPAL</label>
+						<label for="posicion" class="posi">POSICIÓN PRINCIPAL</label>
 						<div class="select">
 							<select name="posicion" id="posicion" onchange="activar_desactivar(this)">
 								<option value="" selected></option>
@@ -131,7 +130,7 @@
 						</div>
 					</div>
 					<div class="ano">
-						<label for="ano">AÑO DE SALIDA</label>
+						<label id="anoo" for="ano">AÑO DE SALIDA</label>
 						<div class="select">
 							<select name="ano" id="ano" onchange="activar_desactivar(this)">
 								<option value="" selected></option>
