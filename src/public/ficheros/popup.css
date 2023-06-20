@@ -1,0 +1,66 @@
+.popup-content {
+    display: none;
+    max-height: 80%;
+    height: 80%;
+    padding: 20px;
+    border-radius: 5px;
+    background-image: url("../imagenes/background/Background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: #d2b986 5px solid;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; 
+    top: 50%;
+  }
+  
+  .close-button {
+    margin-top: auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #13a7bb;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: #d2b986 2px solid;
+  }
+  
+  .close-button::before {
+    content: "CERRAR";
+  }
+  
+  @media screen and (max-width: 750px) {
+    .popup-content {
+      width: 80%;
+      height: 80%;
+
+    }
+
+  }
+
+  @media screen and (max-width: 850px) {
+    .popup-content p {
+        margin-bottom: 1vw; 
+      }
+  }
+  
+  
+  #titulo-pop {
+    color: white;
+    font-family: "Georgia", sans-serif;
+  }
+  
+  p {
+    color: white;
+    font-size: 1em;
+  }
+  
+  #emote {
+    width: 10em;
+  }
+  

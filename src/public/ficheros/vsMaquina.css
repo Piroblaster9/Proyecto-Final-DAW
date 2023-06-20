@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#personajes-container {
+  color: white;
+  font-family: 'Friz Quadrata', sans-serif;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.content {
+  background-image: url("../imagenes/background/Background.png");
+}
+
+.nombre {
+  font-size: 0.8em;
+}
+
+.barra-superior {
+  min-height: 20%;
+  background-color: #010a13;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  border: #d2b986 2px solid;
+}
+
+.logo {
+  width: 21.5%;
+}
+
+@media screen and (max-width: 650px) {
+
+  .logo,
+  .btn-salir {
+    position: absolute;
+    left: -9999px;
+  }
+
+  #restantes {
+    width: 30%;
+  }
+
+  .chat-container {
+    width: 70%;
+  }
+}
+
+
+
+.container {
+  flex: 1;
+  display: flex;
+}
+
+.barra-lateral {
+  flex: 0 0 20%;
+  background-color: #010a13;
+  color: white;
+  border-bottom: #d2b986 2px solid;
+  border-left: #d2b986 2px solid;
+  border-right: #d2b986 2px solid;
+  padding: 5px 15px;
+}
+
+
+
+.interior-barra-izda {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.select {
+  border: 1px solid #c4a361;
+  background-color: #101621;
+  margin: 5px 0;
+}
+
+select {
+  background: transparent;
+  border: none;
+  height: 30px;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  color: #d2b986;
+}
+
+select option {
+  font-size: 12px;
+  background-color: #fff;
+  color: #000;
+}
+
+label {
+  font-size: 12px;
+}
+
+.btn__sign-in {
+  padding: 7.5px 0;
+  font-weight: bold;
+  font-family: "Georgia", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #13a7bb;
+  background-color: #052b30;
+  border: 2px solid #13a7bb;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#confirmar {
+  margin-top: 0.5em;
+}
+
+.btn {
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-salir {
+  margin-right: 0.5em;
+  width: 80px;
+
+}
+
+.hidden {
+  display: none;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form>div {
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+  margin-bottom: 10px;
+}
+
+.form label {
+  flex-basis: 40%;
+  text-align: left;
+}
+
+.form .select {
+  flex-basis: 60%;
+  text-align: right;
+}
+
+#titulo-preguntas,
+#restantes {
+  color: #d2b986;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#titulo-preguntas {
+  margin-bottom: 1.5em;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .interior-barra-izda {
+    flex-direction: column;
+  }
+
+  .form>div {
+    flex-direction: column;
+  }
+
+  .form label {
+    text-align: left;
+    margin-right: auto;
+    flex-basis: 100%;
+  }
+
+  .form .select {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.contenido {
+  flex: 1;
+  background-color: #f2f2f2;
+  background-image: url("../imagenes/background/Background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-x: 50%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  border-bottom: #d2b986 2px solid;
+  border-right: #d2b986 2px solid;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 5px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1100px) {
+  .contenido {
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  .columna {
+    margin-top: 1.5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contenido {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.titulo-victoria-verde {
+  color: lightgreen;
+}
+
+.titulo-derrota-rojo {
+  color: red;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*width: 100px;*/
+  height: 100px;
+
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.columna.show,
+.show {
+  opacity: 1;
+}
+
+.columna img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.hide {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+.valor,
+.atributo {
+  font-family: 'Friz Quadrata', sans-serif;
+  color: white;
+}
+
+.valor {
+  color: #d2b986;
+}

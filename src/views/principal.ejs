@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>¿Quién es quién?</title>
+	<link rel="icon" type="image/png" href="/imagenes/logo/favicon.png">
+	<link href="https://fonts.cdnfonts.com/css/friz-quadrata" rel="stylesheet">
+	<link href="ficheros/principal.css" rel="stylesheet" type="text/css">
+	<link href="ficheros/popup.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<header>
+		<div class="header-container">
+			<img id="logo" src="imagenes/logo/League of Legends Logo.webp" />
+		</div>
+	</header>
+
+	<div class="buttons-container">
+		<a class="boton-jugar" href=/vsmaquina>
+			<img src="imagenes/botones/ButtonAbilityEmpty.e619ab4a.webp" class="button-img">
+			<div class="button-title">Jugar</div>
+			<div class="button-description">Juega contra la máquina</div>
+		</a>
+
+		<div class="boton-info">
+			<img src="imagenes/botones/ButtonClassicEmpty.7359c354.webp" class="button-img">
+			<div class="button-title">Cómo jugar</div>
+			<div class="button-description">Aprende las reglas del juego</div>
+		</div>
+
+		<div id="popupContainer" class="popup-container">
+			<div class="popup-content">
+			  <h2 id="titulo-pop">¿COMO SE JUEGA?</h2>
+			  <img src="imagenes/Does_Not_Compute_Emote.webp" alt="Imagen del Pop-up" id="emote">
+
+				<p>El objetivo del juego es adivinar el personaje ganador.</p>
+				<p>Para lograrlo, dispones de una batería de preguntas.</p>
+				<p>En base a las respuestas, los personajes se irán descartando.</p>
+				<p>Cuando sólo quede uno habrás acertado el personaje.</p>
+				<p>Si te quedas sin preguntas, pierdes la partida. ¡SUERTE!</p>
+
+			  <button id="closeBtn" class="close-button"></button>
+			</div>
+		  </div>
+		  
+
+		<script src="ficheros/popup.js"></script>
+</body>
+
+</html>

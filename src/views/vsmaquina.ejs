@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>¿Quién es quién?</title>
+	<link rel="icon" type="image/png" href="/imagenes/logo/favicon.png">
+	<link href="https://fonts.cdnfonts.com/css/friz-quadrata" rel="stylesheet">
+	<link href="ficheros/vsMaquina.css" rel="stylesheet" type="text/css">
+	<link href="ficheros/chat.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="barra-superior">
+		<img class="logo" src="imagenes/logo/League of Legends Logo.webp" alt="logo">
+		<div id="restantes" class="hidden">INTENTOS: <span id="intentos-restantes"> 5</span></div>
+
+
+		<div class="chat-container hidden">
+			<div class="chat">
+
+				<!--<div class="bubble mine">¿Es hombre?</div>-->
+			</div>
+		</div>
+
+		<div class="btn btn__sign-in btn-salir" onclick="window.location.href = '/'">
+			<span>SALIR</span>
+		</div>
+
+	</div>
+
+	<div class="container">
+		<div class="barra-lateral">
+			<div class="interior-barra-izda">
+				<div class="form" id="select-container">
+					<div id="titulo-preguntas">PREGUNTAS SOBRE:</div>
+					<div class="genero">
+						<label for="genero">GÉNERO</label>
+						<div class="select">
+							<select name="genero" id="genero" onchange="activar_desactivar(this)">
+								<option value="" selected></option>
+								<option value="Hombre">¿Es hombre?</option>
+								<option value="Mujer">¿Es mujer?</option>
+							</select>
+						</div>
+					</div>
+					<div class="cabello">
+						<label for="cabello">CABELLO</label>
+						<div class="select">
+							<select name="cabello" id="cabello" onchange="activar_desactivar(this)">
+								<option value="" selected></option>
+								<option value="1">¿Tiene cabello?</option>
+								<option value="0">¿No tiene cabello?</option>
+							</select>
+						</div>
+					</div>
+					<div class="raza">
+						<label for="raza">RAZA</label>
+						<div class="select">
+							<select name="raza" id="raza" onchange="activar_desactivar(this)">
+								<option value="" selected></option>
+								<option value="Humano">¿Es un humano?</option>
+								<option value="Vastaya">¿Es un vastaya?</option>
+								<option value="Yordle">¿Es un yordle?</option>
+								<option value="Oscuro">¿Es un oscuro?</option>
+								<option value="Voidborn">¿Es un ser del vacío?</option>
+								<option value="No-muerto">¿Es un no-muerto?</option>
+								<option value="Ascendido">¿Es un ascendido?</option>
+								<option value="Aspecto">¿Es un aspecto?</option>
+								<option value="Dios">¿Es un dios?</option>
+							</select>
+						</div>
+					</div>
+					<div class="region">
+						<label for="region">REGIÓN</label>
+						<div class="select">
+							<select name="region" id="region" onchange="activar_desactivar(this)">
+								<option value="" selected></option>
+								<option value="Jonia">¿Viene de Jonia?</option>
+								<option value="Shurima">¿Viene de Shurima?</option>
+								<option value="Freljord">¿Viene de Freljord?</option>
+								<option value="Noxus">¿Viene de Noxus?</option>
+								<option value="Demacia">¿Viene de Demacia?</option>
+								<option value="Piltover">¿Viene de Piltover?</option>
+								<option value="Zaun">¿Viene de Zaun?</option>
+								<option value="Targon">¿Viene de Targon?</option>
+								<option value="Vacio">¿Viene del Vacío?</option>
+								<option value="Bandle">¿Viene de Bandle?</option>
+								<option value="Isla-Sombras">¿Viene de la Isla de las Sombras?</option>
+								<option value="Aguas-Estancadas">¿Viene de Aguas-Estancadas?</option>
+								<option value="Ixtal">¿Viene de Ixtal?</option>
+							</select>
+						</div>
+					</div>
+					<div class="rango">
+						<label for="rango">RANGO DE ATAQUE</label>
+						<div class="select">
+							<select name="rango" id="rango" onchange="activar_desactivar(this)">
+								<option value="" selected></option>
+								<option value="Melee">¿Es melee?</option>
+								<option value="Rango">¿Es rango?</option>
+							</select>
+						</div>
+					</div>
+					<div class="posicion">
+						<label for="posicion">POSICIÓN PRINCIPAL</label>
+						<div class="select">
+							<select name="posicion" id="posicion" onchange="activar_desactivar(this)">
+								<option value="" selected></option>
+								<option value="Top">¿Es toplaner?</option>
+								<option value="Jungla">¿Es jungla?</option>
+								<option value="Mid">¿Es midlaner?</option>
+								<option value="Bot">¿Es ADCarry?</option>
+								<option value="Support">¿Es support?</option>
+							</select>
+						</div>
+					</div>
+					<div class="recurso">
+						<label for="recurso">RECURSO</label>
+						<div class="select">
+							<select name="recurso" id="recurso" onchange="activar_desactivar(this)">
+								<option value="" selected></option>
+								<option value="Mana">¿Usa mana?</option>
+								<option value="Energia">¿Usa energía?</option>
+								<option value="Furia">¿Usa furia?</option>
+								<option value="Vida">¿Usa vida?</option>
+								<option value="Nada">¿No usa nada?</option>
+							</select>
+						</div>
+					</div>
+					<div class="ano">
+						<label for="ano">AÑO DE SALIDA</label>
+						<div class="select">
+							<select name="ano" id="ano" onchange="activar_desactivar(this)">
+								<option value="" selected></option>
+								<option value="2009-2013">¿Salió entre 2009 y 2013?</option>
+								<option value="2014-2018">¿Salió entre 2014 y 2018?</option>
+								<option value="2019-2023">¿Salió entre 2019 y 2023?</option>
+							</select>
+						</div>
+					</div>
+					<div class="btn btn__sign-in" id="confirmar">
+						<span>CONFIRMAR PREGUNTA</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="contenido" id="personajes-container">
+			<% for (var i=0; i < personajes.length; i++) { %>
+				<div class="columna" data-nombre="<%= personajes[i].NOMBRE %>" data-genero="<%= personajes[i].GENERO %>"
+					data-cabello="<%= personajes[i].CABELLO %>" data-posicion="<%= personajes[i].POSICION %>"
+					data-raza="<%= personajes[i].RAZA %>" data-recurso="<%= personajes[i].RECURSO %>"
+					data-rango="<%= personajes[i].RANGO %>" data-region="<%= personajes[i].REGION %>"
+					data-ano="<%= personajes[i].ANO %>" data-imagen="data:image/jpeg;base64,<%= personajes[i].IMAGEN.toString('base64') %>">
+					<img src="data:image/jpeg;base64,<%= personajes[i].IMAGEN.toString('base64') %>">
+					<p>
+						<%= personajes[i].NOMBRE %>
+					</p>
+				</div>
+				<% } %>
+		</div>
+
+	</div>
+	</div>
+	<script src="ficheros/jugabilidad.js"></script>
+	<script src="ficheros/codigo.js"></script>
+
+</body>
+
+</html>
