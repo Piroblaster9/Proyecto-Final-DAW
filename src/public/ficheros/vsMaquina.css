@@ -219,22 +219,22 @@ label {
 
 @media screen and (min-width: 1400px) {
   .columna img {
-    width: 10em !important;
-    height: 10em !important;
+    width: 7em !important;
+    height: 7em !important;
   }
 
   .columna p{
-    font-size: 1.5em !important ;
+    font-size: 1.3em !important ;
   }
 
   .form label{
-    font-size: 1.75em !important;
+    font-size: 1em !important;
   }
   select{
-    height: 4em !important;
+    height: 3em !important;
   }
   #confirmar{
-    font-size: 1.75em !important;
+    font-size: 1em !important;
   }
   #restantes{
     font-size: 1.5em;
