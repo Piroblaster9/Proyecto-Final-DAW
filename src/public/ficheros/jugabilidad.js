@@ -87,6 +87,10 @@ function mostrarPantallaVictoria(personaje) {
       }
     }
 
+    //confeti
+    start();
+    stop();
+
 
     // Desactivar todos los selects y cambiar su color
     var selectContainer = document.getElementById('select-container');

@@ -31,8 +31,6 @@ function scrollDown() {
   chatContainer.scrollTop = chatContainer.scrollHeight;
 }
 
-
-
 var columnas = document.getElementsByClassName('columna');
 
 // Variable booleana para controlar si ya se mostró el mensaje de error
@@ -50,10 +48,15 @@ function mostrarElementos() {
     selects[i].style.backgroundColor = '#383838';
   }
 
+  
+
+
   for (var i = 0; i < columnas.length; i++) {
     // Agrega la clase 'show' con un retraso incremental
     setTimeout(function (index) {
       columnas[index].classList.add('show');
+
+ 
 
       // Verifica si se han mostrado todos los personajes
       if (index === columnas.length - 1) {

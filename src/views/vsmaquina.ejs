@@ -18,7 +18,7 @@
 		<div id="restantes" class="hidden">INTENTOS: <span id="intentos-restantes">&nbsp;5</span></div>
 
 		<div class="chat-container hidden">
-			<div class="chat">
+			<div class="chat" id="chat">
 
 				<!--<div class="bubble mine">¿Es hombre?</div>-->
 			</div>
@@ -147,6 +147,7 @@
 			</div>
 		</div>
 
+
 		<div class="contenido" id="personajes-container">
 			<% for (var i=0; i < personajes.length; i++) { %>
 				<div class="columna" data-nombre="<%= personajes[i].NOMBRE %>" data-genero="<%= personajes[i].GENERO %>"
@@ -166,7 +167,7 @@
 	</div>
 	<script src="ficheros/jugabilidad.js"></script>
 	<script src="ficheros/codigo.js"></script>
-
+	<script src="ficheros/confetti.js"></script>
 </body>
 
 </html>
