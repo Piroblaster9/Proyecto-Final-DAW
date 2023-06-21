@@ -1,0 +1,11 @@
+Mi aplicación se encuentra en un hosting actualmente, por lo que puedes usarla
+directamente aquí sin necesidad de instalar nada: http://piro9.alwaysdata.net
+
+Para usar esta versión local deberás tener un servidor local como XAMPP, un sistema de gestión de bases de datos
+como MySQL (si quieres poder usar el proyecto sin cambiar la configuración del mismo,
+deberás utilizar un usuario llamado “jorge” y una contraseña “666666” en MySQL
+Workbench). Recuerda importar la base de datos que va en el proyecto.
+Una vez tengas esto, solo tienes que abrir la carpeta en la que tengas el proyecto, y abrir
+un terminal allí para usar los comandos “npm install” seguido de “npm run start”. Ya
+puedes acceder a mi proyecto en “localhost:3000”.
+El proyecto está hecho con nodejs y utiliza JavaScript, CSS y PHP
